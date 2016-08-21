@@ -1,0 +1,21 @@
+
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <link rel="stylesheet" href="main.css">
+
+  </head>
+  <body>
+    <div data-ng-controller="HelloController as Hello">
+      {{ Hello.person.fname }}
+      <react-component name="Timer" props="Hello" />
+    </div>
+
+   <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/react/dist/react.js"></script>
+    <script src="node_modules/react-dom/dist/react-dom.js"></script>
+    <script src="node_modules/ngreact/ngReact.js"></script>
+    <script src="dist/Timer.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
