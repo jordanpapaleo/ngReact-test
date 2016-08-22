@@ -23172,13 +23172,18 @@ var FormBuilder = function (_Component) {
       var fields = _props2.fields;
 
 
+      var styles = {
+        border: '2px gray dotted',
+        padding: '20px 30px'
+      };
+
       return _react2.default.createElement(
         'div',
-        null,
+        { style: styles },
         _react2.default.createElement(
           'h1',
           null,
-          'Hey ',
+          'React App: Hey ',
           config.fname
         ),
         _react2.default.createElement(
