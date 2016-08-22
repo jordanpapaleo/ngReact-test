@@ -17,9 +17,9 @@
     }
 
   angular.module('app')
-    .value('Timer', Timer)
-    .directive('timer', (reactDirective) => {
-      return reactDirective(Timer);
+    .value('FormBuilder', FormBuilder)
+    .directive('formBuilder', (reactDirective) => {
+      return reactDirective(FormBuilder);
     })
 
 })(window, document, angular);
