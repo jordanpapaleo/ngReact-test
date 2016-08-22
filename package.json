@@ -4,7 +4,8 @@
   "description": "Fast Gulp, Browserify, Babelify, Watchify and React build process",
   "main": "index.js",
   "scripts": {
-    "start": "serve"
+    "start": "serve",
+    "start:dev": "gulp"
   },
   "license": "MIT",
   "devDependencies": {
