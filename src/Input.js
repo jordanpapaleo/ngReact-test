@@ -15,7 +15,7 @@ export default class Input extends Component {
 
   render () {
     return (
-      <div>Input</div>
+      <div>Input Component</div>
     )
   }
 }

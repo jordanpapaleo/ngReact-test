@@ -4,7 +4,12 @@
   <head></head>
   <body>
     <div data-ng-controller="HelloController as Hello">
-      {{ Hello.person.fname }}
+      <h1 ng-cloak>{{ Hello.person.fname }}</h1>
+      <h3>Angular fields</h3>
+      <ul>
+        <li ng-repeat="field in Hello.fields track by $index" ng-cloak>{{ field }}</li>
+      </ul>
+
       <react-component name="FormBuilder" props="Hello.props" />
     </div>
 
