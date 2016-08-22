@@ -3,9 +3,15 @@
 <html ng-app="app">
   <head></head>
   <body>
-    <div data-ng-controller="HelloController as Hello">
-      {{ Hello.person.fname }}
-      <react-component name="FormBuilder" props="Hello" />
+    <div data-ng-controller="HelloController as Hello" style="border: 1px solid green; padding: 20px 30px;">
+      <h1 ng-cloak>Angular App: Hello {{ Hello.person.fname }}</h1>
+      <label>Name:</label> <input type="text" ng-model="Hello.person.fname" />
+      <h3>Angular fields</h3>
+      <ul>
+        <li ng-repeat="field in Hello.fields track by $index" ng-cloak>{{ field }}</li>
+      </ul>
+
+      <react-component name="FormBuilder" props="Hello.props" />
     </div>
 
     <script src="node_modules/angular/angular.js"></script>

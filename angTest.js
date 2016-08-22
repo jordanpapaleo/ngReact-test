@@ -1,5 +1,5 @@
 (function(window, document, angular, undefined) {
-  'use strict';
+  'use strict'
 
   angular.module('app', ['react'])
 
@@ -10,16 +10,25 @@
     HelloController.$inject = []
 
     function HelloController () {
-      this.person = { fname: 'Jordan', lname: 'Papaleo' }
-      this.clickCheck = function (blar) {
-        console.log('Controller clicked', blar)
+      const vm = this
+
+      vm.person = { fname: 'Jordan', lname: 'Papaleo' }
+      vm.fields = ['hay', 'bay', 'say']
+      vm.props = {
+        config: vm.person,
+        cb: updateFields
+      }
+
+      function updateFields (blar) {
+        console.log('Angular event fired')
+        vm.fields = vm.fields.concat(blar)
       }
     }
 
   angular.module('app')
     .value('FormBuilder', FormBuilder)
     .directive('formBuilder', (reactDirective) => {
-      return reactDirective(FormBuilder);
+      return reactDirective(FormBuilder)
     })
 
-})(window, document, angular);
+})(window, document, angular)

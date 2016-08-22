@@ -4,7 +4,7 @@
   "description": "Fast Gulp, Browserify, Babelify, Watchify and React build process",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "serve"
   },
   "license": "MIT",
   "devDependencies": {
@@ -22,9 +22,20 @@
     "gulp-util": "^3.0.7",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
+    "serve": "^1.4.0",
     "utils-merge": "^1.0.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "angular": "^1.5.8",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "react-redux": "^4.4.5",
+    "redux": "^3.5.2",
+    "redux-multi": "^0.1.12",
+    "redux-promise": "^0.5.3",
+    "redux-thunk": "^2.1.0"
   }
 }
