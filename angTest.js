@@ -11,7 +11,12 @@
 
     function HelloController () {
       this.person = { fname: 'Jordan', lname: 'Papaleo' }
-      this.clickCheck = function (blar) {
+      this.props = {
+        person: this.person,
+        cb: cb
+      }
+
+      function cb (blar) {
         console.log('Controller clicked', blar)
       }
     }

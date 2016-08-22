@@ -4159,10 +4159,19 @@ var FormBuilder = function (_React$Component) {
   function FormBuilder(props) {
     _classCallCheck(this, FormBuilder);
 
-    return _possibleConstructorReturn(this, Object.getPrototypeOf(FormBuilder).call(this, props));
+    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(FormBuilder).call(this, props));
+
+    console.log(props);
+    return _this;
   }
 
   _createClass(FormBuilder, [{
+    key: 'onclick',
+    value: function onclick() {
+      console.log('Clicked');
+      this.props.cb(true);
+    }
+  }, {
     key: 'render',
     value: function render() {
       return React.createElement(
@@ -4172,6 +4181,11 @@ var FormBuilder = function (_React$Component) {
           'h1',
           null,
           'Test'
+        ),
+        React.createElement(
+          'button',
+          { onClick: this.onclick.bind(this) },
+          'Click Me'
         ),
         React.createElement(_Input2.default, null)
       );

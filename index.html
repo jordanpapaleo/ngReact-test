@@ -5,7 +5,7 @@
   <body>
     <div data-ng-controller="HelloController as Hello">
       {{ Hello.person.fname }}
-      <react-component name="FormBuilder" props="Hello" />
+      <react-component name="FormBuilder" props="Hello.props" />
     </div>
 
     <script src="node_modules/angular/angular.js"></script>
